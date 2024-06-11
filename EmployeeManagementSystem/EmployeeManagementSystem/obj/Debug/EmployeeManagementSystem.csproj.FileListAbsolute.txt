@@ -1,0 +1,37 @@
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\EmployeeManagementSystem.exe.config
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\EmployeeManagementSystem.exe
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\EmployeeManagementSystem.pdb
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Form1.resources
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Properties.Resources.resources
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.csproj.GenerateResource.cache
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.exe
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.pdb
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.RegisterForm.resources
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.MainForm.resources
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.AddEmployee.resources
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Dashboard.resources
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Salary.resources
+C:\Users\WINDOWS 10\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.csproj.AssemblyReference.cache
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.csproj.AssemblyReference.cache
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Ui.Components.AddEmployee.resources
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Ui.Components.Dashboard.resources
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Ui.Login.resources
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Ui.MainForm.resources
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Properties.Resources.resources
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Ui.RegisterForm.resources
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Ui.Components.Salary.resources
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.csproj.GenerateResource.cache
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.csproj.CoreCompileInputs.cache
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.exe
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.pdb
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\EmployeeManagementSystem.exe.config
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\EmployeeManagementSystem.exe
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\EmployeeManagementSystem.pdb
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\MySql.Data.dll
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\System.Memory.dll
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\System.Numerics.Vectors.dll
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\System.Buffers.dll
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\MySql.Data.xml
+D:\Employee-Management-System-3\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.csproj.CopyComplete
