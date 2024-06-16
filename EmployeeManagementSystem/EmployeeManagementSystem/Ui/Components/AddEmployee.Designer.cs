@@ -32,15 +32,18 @@ namespace EmployeeManagementSystem.Ui.Components
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtEmployees = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.save_btn = new System.Windows.Forms.Button();
             this.addEmployee_status = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.clear_btn = new System.Windows.Forms.Button();
-            this.delete_btn = new System.Windows.Forms.Button();
-            this.update_btn = new System.Windows.Forms.Button();
-            this.create_btn = new System.Windows.Forms.Button();
             this.addEmployee_position = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.addEmployee_phoneNum = new System.Windows.Forms.TextBox();
@@ -52,14 +55,11 @@ namespace EmployeeManagementSystem.Ui.Components
             this.addEmployee_id = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.clear_btn = new System.Windows.Forms.Button();
+            this.delete_btn = new System.Windows.Forms.Button();
+            this.update_btn = new System.Windows.Forms.Button();
+            this.create_btn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.save_btn = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtEmployees)).BeginInit();
             this.panel3.SuspendLayout();
@@ -80,6 +80,7 @@ namespace EmployeeManagementSystem.Ui.Components
             // 
             // dtEmployees
             // 
+            this.dtEmployees.AllowUserToResizeColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,13 +97,55 @@ namespace EmployeeManagementSystem.Ui.Components
             this.phone,
             this.position,
             this.status});
+            this.dtEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtEmployees.EnableHeadersVisualStyles = false;
-            this.dtEmployees.Location = new System.Drawing.Point(22, 59);
+            this.dtEmployees.Location = new System.Drawing.Point(0, 0);
             this.dtEmployees.Name = "dtEmployees";
-            this.dtEmployees.ReadOnly = true;
-            this.dtEmployees.Size = new System.Drawing.Size(798, 193);
+            this.dtEmployees.Size = new System.Drawing.Size(837, 277);
             this.dtEmployees.TabIndex = 3;
+            this.dtEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtEmployees_CellContentClick);
             this.dtEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtEmployees_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Full Name";
+            this.name.Name = "name";
+            this.name.Width = 150;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.Width = 150;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "phone";
+            this.phone.Name = "phone";
+            this.phone.Width = 150;
+            // 
+            // position
+            // 
+            this.position.DataPropertyName = "position";
+            this.position.HeaderText = "Position";
+            this.position.Name = "position";
+            this.position.Width = 150;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.Width = 150;
             // 
             // label1
             // 
@@ -145,6 +188,25 @@ namespace EmployeeManagementSystem.Ui.Components
             this.panel3.Size = new System.Drawing.Size(643, 215);
             this.panel3.TabIndex = 2;
             // 
+            // save_btn
+            // 
+            this.save_btn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.save_btn.FlatAppearance.BorderSize = 0;
+            this.save_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_btn.ForeColor = System.Drawing.Color.White;
+            this.save_btn.Location = new System.Drawing.Point(19, 164);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(113, 37);
+            this.save_btn.TabIndex = 18;
+            this.save_btn.Text = "Save";
+            this.save_btn.UseVisualStyleBackColor = false;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
+            // 
             // addEmployee_status
             // 
             this.addEmployee_status.Enabled = false;
@@ -167,82 +229,6 @@ namespace EmployeeManagementSystem.Ui.Components
             this.label7.Size = new System.Drawing.Size(44, 15);
             this.label7.TabIndex = 18;
             this.label7.Text = "Status:";
-            // 
-            // clear_btn
-            // 
-            this.clear_btn.BackColor = System.Drawing.Color.Blue;
-            this.clear_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clear_btn.FlatAppearance.BorderSize = 0;
-            this.clear_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_btn.ForeColor = System.Drawing.Color.White;
-            this.clear_btn.Location = new System.Drawing.Point(40, 148);
-            this.clear_btn.Name = "clear_btn";
-            this.clear_btn.Size = new System.Drawing.Size(113, 37);
-            this.clear_btn.TabIndex = 17;
-            this.clear_btn.Text = "Clear";
-            this.clear_btn.UseVisualStyleBackColor = false;
-            this.clear_btn.Click += new System.EventHandler(this.addEmployee_clearBtn_Click);
-            // 
-            // delete_btn
-            // 
-            this.delete_btn.BackColor = System.Drawing.Color.Blue;
-            this.delete_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delete_btn.FlatAppearance.BorderSize = 0;
-            this.delete_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.delete_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.delete_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete_btn.ForeColor = System.Drawing.Color.White;
-            this.delete_btn.Location = new System.Drawing.Point(40, 105);
-            this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(113, 37);
-            this.delete_btn.TabIndex = 16;
-            this.delete_btn.Text = "Delete";
-            this.delete_btn.UseVisualStyleBackColor = false;
-            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
-            // 
-            // update_btn
-            // 
-            this.update_btn.BackColor = System.Drawing.Color.Blue;
-            this.update_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.update_btn.FlatAppearance.BorderSize = 0;
-            this.update_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.update_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.update_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update_btn.ForeColor = System.Drawing.Color.White;
-            this.update_btn.Location = new System.Drawing.Point(40, 62);
-            this.update_btn.Name = "update_btn";
-            this.update_btn.Size = new System.Drawing.Size(113, 37);
-            this.update_btn.TabIndex = 15;
-            this.update_btn.Text = "Update";
-            this.update_btn.UseVisualStyleBackColor = false;
-            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
-            // 
-            // create_btn
-            // 
-            this.create_btn.BackColor = System.Drawing.Color.Blue;
-            this.create_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.create_btn.FlatAppearance.BorderSize = 0;
-            this.create_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.create_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.create_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.create_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.create_btn.ForeColor = System.Drawing.Color.White;
-            this.create_btn.Location = new System.Drawing.Point(40, 21);
-            this.create_btn.Name = "create_btn";
-            this.create_btn.Size = new System.Drawing.Size(113, 37);
-            this.create_btn.TabIndex = 14;
-            this.create_btn.Text = "New";
-            this.create_btn.UseVisualStyleBackColor = false;
-            this.create_btn.Click += new System.EventHandler(this.addEmployee_addBtn_Click);
             // 
             // addEmployee_position
             // 
@@ -359,6 +345,82 @@ namespace EmployeeManagementSystem.Ui.Components
             this.panel4.Size = new System.Drawing.Size(839, 226);
             this.panel4.TabIndex = 1;
             // 
+            // clear_btn
+            // 
+            this.clear_btn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.clear_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clear_btn.FlatAppearance.BorderSize = 0;
+            this.clear_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_btn.ForeColor = System.Drawing.Color.White;
+            this.clear_btn.Location = new System.Drawing.Point(40, 148);
+            this.clear_btn.Name = "clear_btn";
+            this.clear_btn.Size = new System.Drawing.Size(113, 37);
+            this.clear_btn.TabIndex = 17;
+            this.clear_btn.Text = "Clear";
+            this.clear_btn.UseVisualStyleBackColor = false;
+            this.clear_btn.Click += new System.EventHandler(this.addEmployee_clearBtn_Click);
+            // 
+            // delete_btn
+            // 
+            this.delete_btn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.delete_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete_btn.FlatAppearance.BorderSize = 0;
+            this.delete_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.delete_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.delete_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete_btn.ForeColor = System.Drawing.Color.White;
+            this.delete_btn.Location = new System.Drawing.Point(40, 105);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(113, 37);
+            this.delete_btn.TabIndex = 16;
+            this.delete_btn.Text = "Delete";
+            this.delete_btn.UseVisualStyleBackColor = false;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
+            // 
+            // update_btn
+            // 
+            this.update_btn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.update_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_btn.FlatAppearance.BorderSize = 0;
+            this.update_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.update_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.update_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.update_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_btn.ForeColor = System.Drawing.Color.White;
+            this.update_btn.Location = new System.Drawing.Point(40, 62);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(113, 37);
+            this.update_btn.TabIndex = 15;
+            this.update_btn.Text = "Update";
+            this.update_btn.UseVisualStyleBackColor = false;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
+            // 
+            // create_btn
+            // 
+            this.create_btn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.create_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.create_btn.FlatAppearance.BorderSize = 0;
+            this.create_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.create_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.create_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.create_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.create_btn.ForeColor = System.Drawing.Color.White;
+            this.create_btn.Location = new System.Drawing.Point(40, 21);
+            this.create_btn.Name = "create_btn";
+            this.create_btn.Size = new System.Drawing.Size(113, 37);
+            this.create_btn.TabIndex = 14;
+            this.create_btn.Text = "New";
+            this.create_btn.UseVisualStyleBackColor = false;
+            this.create_btn.Click += new System.EventHandler(this.addEmployee_addBtn_Click);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -370,72 +432,6 @@ namespace EmployeeManagementSystem.Ui.Components
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(185, 211);
             this.panel5.TabIndex = 4;
-            // 
-            // save_btn
-            // 
-            this.save_btn.BackColor = System.Drawing.Color.Blue;
-            this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.save_btn.FlatAppearance.BorderSize = 0;
-            this.save_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_btn.ForeColor = System.Drawing.Color.White;
-            this.save_btn.Location = new System.Drawing.Point(19, 164);
-            this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(113, 37);
-            this.save_btn.TabIndex = 18;
-            this.save_btn.Text = "Save";
-            this.save_btn.UseVisualStyleBackColor = false;
-            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Full Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 150;
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Width = 150;
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "phone";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            this.phone.Width = 150;
-            // 
-            // position
-            // 
-            this.position.DataPropertyName = "position";
-            this.position.HeaderText = "Position";
-            this.position.Name = "position";
-            this.position.ReadOnly = true;
-            this.position.Width = 150;
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            this.status.Width = 150;
             // 
             // AddEmployee
             // 

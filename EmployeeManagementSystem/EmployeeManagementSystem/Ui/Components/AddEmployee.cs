@@ -121,7 +121,12 @@ namespace EmployeeManagementSystem.Ui.Components
 
         private void addEmployee_clearBtn_Click(object sender, EventArgs e)
         {
-
+            addEmployee_id.Text = string.Empty;
+            addEmployee_fullName.Text = string.Empty;
+            addEmployee_gender.Text = string.Empty;
+            addEmployee_phoneNum.Text = string.Empty;
+            addEmployee_position.Text = string.Empty;
+            addEmployee_status.Text = string.Empty;
         }
 
         private void AddEmployee_Load(object sender, EventArgs e)
@@ -174,7 +179,7 @@ namespace EmployeeManagementSystem.Ui.Components
             Employees emp = new Employees(Convert.ToInt32(addEmployee_id.Text),addEmployee_fullName.Text, addEmployee_gender.Text, addEmployee_phoneNum.Text, addEmployee_position.Text, addEmployee_status.Text);
             if (emp.delete() == 1)
             {
-                MessageBox.Show("delete employee sukses");
+             
             }
             else
             {

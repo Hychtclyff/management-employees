@@ -29,7 +29,7 @@ namespace EmployeeManagementSystem.Ui.Components
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.salary_clearBtn = new System.Windows.Forms.Button();
             this.salary_updateBtn = new System.Windows.Forms.Button();
@@ -42,11 +42,15 @@ namespace EmployeeManagementSystem.Ui.Components
             this.salary_employeeID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtSalaries = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtSalaries)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,7 +74,7 @@ namespace EmployeeManagementSystem.Ui.Components
             // 
             // salary_clearBtn
             // 
-            this.salary_clearBtn.BackColor = System.Drawing.Color.Blue;
+            this.salary_clearBtn.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.salary_clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.salary_clearBtn.FlatAppearance.BorderSize = 0;
             this.salary_clearBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -85,10 +89,11 @@ namespace EmployeeManagementSystem.Ui.Components
             this.salary_clearBtn.TabIndex = 16;
             this.salary_clearBtn.Text = "Clear";
             this.salary_clearBtn.UseVisualStyleBackColor = false;
+            this.salary_clearBtn.Click += new System.EventHandler(this.salary_clearBtn_Click);
             // 
             // salary_updateBtn
             // 
-            this.salary_updateBtn.BackColor = System.Drawing.Color.Blue;
+            this.salary_updateBtn.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.salary_updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.salary_updateBtn.FlatAppearance.BorderSize = 0;
             this.salary_updateBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -103,9 +108,11 @@ namespace EmployeeManagementSystem.Ui.Components
             this.salary_updateBtn.TabIndex = 15;
             this.salary_updateBtn.Text = "Update";
             this.salary_updateBtn.UseVisualStyleBackColor = false;
+            this.salary_updateBtn.Click += new System.EventHandler(this.salary_updateBtn_Click);
             // 
             // salary_salary
             // 
+            this.salary_salary.Enabled = false;
             this.salary_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary_salary.Location = new System.Drawing.Point(22, 245);
             this.salary_salary.Multiline = true;
@@ -125,6 +132,7 @@ namespace EmployeeManagementSystem.Ui.Components
             // 
             // salary_position
             // 
+            this.salary_position.Enabled = false;
             this.salary_position.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary_position.Location = new System.Drawing.Point(22, 186);
             this.salary_position.Multiline = true;
@@ -144,6 +152,7 @@ namespace EmployeeManagementSystem.Ui.Components
             // 
             // salary_name
             // 
+            this.salary_name.Enabled = false;
             this.salary_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary_name.Location = new System.Drawing.Point(22, 126);
             this.salary_name.Multiline = true;
@@ -163,6 +172,7 @@ namespace EmployeeManagementSystem.Ui.Components
             // 
             // salary_employeeID
             // 
+            this.salary_employeeID.Enabled = false;
             this.salary_employeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary_employeeID.Location = new System.Drawing.Point(22, 64);
             this.salary_employeeID.Multiline = true;
@@ -184,33 +194,39 @@ namespace EmployeeManagementSystem.Ui.Components
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dtSalaries);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(311, 23);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(547, 517);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // dtSalaries
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(508, 431);
-            this.dataGridView1.TabIndex = 4;
+            this.dtSalaries.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtSalaries.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtSalaries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtSalaries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.employee_name,
+            this.position,
+            this.salary_user});
+            this.dtSalaries.EnableHeadersVisualStyles = false;
+            this.dtSalaries.Location = new System.Drawing.Point(20, 64);
+            this.dtSalaries.Name = "dtSalaries";
+            this.dtSalaries.RowHeadersVisible = false;
+            this.dtSalaries.RowHeadersWidth = 100;
+            this.dtSalaries.Size = new System.Drawing.Size(508, 431);
+            this.dtSalaries.TabIndex = 4;
+            this.dtSalaries.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtSalaries_CellContentClick);
+            this.dtSalaries.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtSalaries_CellContentClick);
             // 
             // label1
             // 
@@ -223,6 +239,33 @@ namespace EmployeeManagementSystem.Ui.Components
             this.label1.Text = "SALARIES";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.Width = 105;
+            // 
+            // employee_name
+            // 
+            this.employee_name.DataPropertyName = "name";
+            this.employee_name.HeaderText = "Name";
+            this.employee_name.Name = "employee_name";
+            this.employee_name.Width = 150;
+            // 
+            // position
+            // 
+            this.position.DataPropertyName = "position";
+            this.position.HeaderText = "Position";
+            this.position.Name = "position";
+            // 
+            // salary_user
+            // 
+            this.salary_user.DataPropertyName = "salary";
+            this.salary_user.HeaderText = "Salary";
+            this.salary_user.Name = "salary_user";
+            this.salary_user.Width = 150;
+            // 
             // Salary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,11 +274,12 @@ namespace EmployeeManagementSystem.Ui.Components
             this.Controls.Add(this.panel1);
             this.Name = "Salary";
             this.Size = new System.Drawing.Size(875, 565);
+            this.Load += new System.EventHandler(this.Salary_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtSalaries)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,6 +299,10 @@ namespace EmployeeManagementSystem.Ui.Components
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button salary_clearBtn;
         private System.Windows.Forms.Button salary_updateBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtSalaries;
+        private System.Windows.Forms.DataGridViewButtonColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salary_user;
     }
 }

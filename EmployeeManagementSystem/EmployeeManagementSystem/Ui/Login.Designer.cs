@@ -67,14 +67,14 @@ namespace EmployeeManagementSystem.Ui
             // 
             // login_signupBtn
             // 
-            this.login_signupBtn.BackColor = System.Drawing.Color.Blue;
+            this.login_signupBtn.BackColor = System.Drawing.Color.SkyBlue;
             this.login_signupBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.login_signupBtn.FlatAppearance.BorderSize = 0;
             this.login_signupBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
             this.login_signupBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
             this.login_signupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_signupBtn.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_signupBtn.ForeColor = System.Drawing.Color.White;
+            this.login_signupBtn.ForeColor = System.Drawing.Color.Black;
             this.login_signupBtn.Location = new System.Drawing.Point(21, 348);
             this.login_signupBtn.Name = "login_signupBtn";
             this.login_signupBtn.Size = new System.Drawing.Size(257, 31);
@@ -151,14 +151,14 @@ namespace EmployeeManagementSystem.Ui
             // 
             // login_btn
             // 
-            this.login_btn.BackColor = System.Drawing.Color.Blue;
+            this.login_btn.BackColor = System.Drawing.Color.SkyBlue;
             this.login_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.login_btn.FlatAppearance.BorderSize = 0;
             this.login_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
             this.login_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
             this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_btn.ForeColor = System.Drawing.Color.White;
+            this.login_btn.ForeColor = System.Drawing.Color.Black;
             this.login_btn.Location = new System.Drawing.Point(22, 244);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(93, 34);

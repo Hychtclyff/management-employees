@@ -32,17 +32,22 @@ namespace EmployeeManagementSystem.Ui
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Label();
-            this.logout_btn = new System.Windows.Forms.Button();
-            this.salary_btn = new System.Windows.Forms.Button();
-            this.addEmployee_btn = new System.Windows.Forms.Button();
             this.greet_user = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dashboard1 = new EmployeeManagementSystem.Ui.Components.Dashboard();
+            this.salary1 = new EmployeeManagementSystem.Ui.Components.Salary();
             this.addEmployee1 = new EmployeeManagementSystem.Ui.Components.AddEmployee();
+            this.dashboard1 = new EmployeeManagementSystem.Ui.Components.Dashboard();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.addEmployee_btn = new System.Windows.Forms.Button();
+            this.logout_btn = new System.Windows.Forms.Button();
+            this.salary_btn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -61,6 +66,7 @@ namespace EmployeeManagementSystem.Ui
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1100, 35);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label2
             // 
@@ -86,61 +92,6 @@ namespace EmployeeManagementSystem.Ui
             this.exit.Text = "X";
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // logout_btn
-            // 
-            this.logout_btn.BackColor = System.Drawing.SystemColors.Control;
-            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.FlatAppearance.BorderSize = 0;
-            this.logout_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_btn.ForeColor = System.Drawing.Color.Black;
-            this.logout_btn.Location = new System.Drawing.Point(6, 339);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(110, 35);
-            this.logout_btn.TabIndex = 5;
-            this.logout_btn.UseVisualStyleBackColor = false;
-            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
-            // 
-            // salary_btn
-            // 
-            this.salary_btn.BackColor = System.Drawing.SystemColors.Control;
-            this.salary_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.salary_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.salary_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.salary_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.salary_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salary_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salary_btn.ForeColor = System.Drawing.Color.Black;
-            this.salary_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salary_btn.Location = new System.Drawing.Point(26, 142);
-            this.salary_btn.Name = "salary_btn";
-            this.salary_btn.Size = new System.Drawing.Size(75, 73);
-            this.salary_btn.TabIndex = 4;
-            this.salary_btn.Text = "SALARY";
-            this.salary_btn.UseVisualStyleBackColor = false;
-            this.salary_btn.Click += new System.EventHandler(this.salary_btn_Click_1);
-            // 
-            // addEmployee_btn
-            // 
-            this.addEmployee_btn.BackColor = System.Drawing.SystemColors.Control;
-            this.addEmployee_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addEmployee_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployee_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_btn.ForeColor = System.Drawing.Color.Black;
-            this.addEmployee_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addEmployee_btn.Location = new System.Drawing.Point(26, 49);
-            this.addEmployee_btn.Name = "addEmployee_btn";
-            this.addEmployee_btn.Size = new System.Drawing.Size(75, 73);
-            this.addEmployee_btn.TabIndex = 3;
-            this.addEmployee_btn.Text = "ADD EMPLOYEE";
-            this.addEmployee_btn.UseVisualStyleBackColor = false;
-            this.addEmployee_btn.Click += new System.EventHandler(this.addEmployee_btn_Click);
-            // 
             // greet_user
             // 
             this.greet_user.AutoSize = true;
@@ -154,6 +105,7 @@ namespace EmployeeManagementSystem.Ui
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.salary1);
             this.panel3.Controls.Add(this.addEmployee1);
             this.panel3.Controls.Add(this.dashboard1);
             this.panel3.Location = new System.Drawing.Point(128, 35);
@@ -161,12 +113,39 @@ namespace EmployeeManagementSystem.Ui
             this.panel3.Size = new System.Drawing.Size(972, 565);
             this.panel3.TabIndex = 2;
             // 
+            // salary1
+            // 
+            this.salary1.Location = new System.Drawing.Point(50, 0);
+            this.salary1.Name = "salary1";
+            this.salary1.Size = new System.Drawing.Size(875, 565);
+            this.salary1.TabIndex = 2;
+            this.salary1.Load += new System.EventHandler(this.salary1_Load);
+            // 
+            // addEmployee1
+            // 
+            this.addEmployee1.Location = new System.Drawing.Point(50, 3);
+            this.addEmployee1.Name = "addEmployee1";
+            this.addEmployee1.Size = new System.Drawing.Size(875, 565);
+            this.addEmployee1.TabIndex = 1;
+            this.addEmployee1.Load += new System.EventHandler(this.addEmployee1_Load);
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.Location = new System.Drawing.Point(50, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(875, 565);
+            this.dashboard1.TabIndex = 0;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox1.Controls.Add(this.logout_btn);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.addEmployee_btn);
-            this.groupBox1.Controls.Add(this.logout_btn);
             this.groupBox1.Controls.Add(this.salary_btn);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 209);
@@ -175,6 +154,17 @@ namespace EmployeeManagementSystem.Ui
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = ":: Navigasi ::";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(14, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 18);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Employees";
             // 
             // groupBox2
             // 
@@ -187,24 +177,27 @@ namespace EmployeeManagementSystem.Ui
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
-            // button1
+            // label3
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(26, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 73);
-            this.button1.TabIndex = 6;
-            this.button1.Text = ":: DASHBOARD ::";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(24, 218);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 18);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Salaries";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(23, 296);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 18);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Salaries";
             // 
             // pictureBox1
             // 
@@ -216,19 +209,95 @@ namespace EmployeeManagementSystem.Ui
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // dashboard1
+            // button1
             // 
-            this.dashboard1.Location = new System.Drawing.Point(50, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(875, 565);
-            this.dashboard1.TabIndex = 0;
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.BackgroundImage = global::EmployeeManagementSystem.Properties.Resources.home;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.SkyBlue;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(39, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 52);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // addEmployee1
+            // addEmployee_btn
             // 
-            this.addEmployee1.Location = new System.Drawing.Point(50, 3);
-            this.addEmployee1.Name = "addEmployee1";
-            this.addEmployee1.Size = new System.Drawing.Size(875, 565);
-            this.addEmployee1.TabIndex = 1;
+            this.addEmployee_btn.BackColor = System.Drawing.Color.SkyBlue;
+            this.addEmployee_btn.BackgroundImage = global::EmployeeManagementSystem.Properties.Resources.employee;
+            this.addEmployee_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.addEmployee_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addEmployee_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addEmployee_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addEmployee_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addEmployee_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addEmployee_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployee_btn.ForeColor = System.Drawing.Color.SkyBlue;
+            this.addEmployee_btn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.addEmployee_btn.Location = new System.Drawing.Point(26, 37);
+            this.addEmployee_btn.Name = "addEmployee_btn";
+            this.addEmployee_btn.Size = new System.Drawing.Size(75, 72);
+            this.addEmployee_btn.TabIndex = 3;
+            this.addEmployee_btn.UseVisualStyleBackColor = false;
+            this.addEmployee_btn.Click += new System.EventHandler(this.addEmployee_btn_Click);
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.BackColor = System.Drawing.Color.SkyBlue;
+            this.logout_btn.BackgroundImage = global::EmployeeManagementSystem.Properties.Resources.logout;
+            this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout_btn.FlatAppearance.BorderSize = 0;
+            this.logout_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.Black;
+            this.logout_btn.Location = new System.Drawing.Point(11, 348);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(29, 31);
+            this.logout_btn.TabIndex = 5;
+            this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
+            // salary_btn
+            // 
+            this.salary_btn.BackColor = System.Drawing.Color.SkyBlue;
+            this.salary_btn.BackgroundImage = global::EmployeeManagementSystem.Properties.Resources.payment;
+            this.salary_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.salary_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.salary_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.salary_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.salary_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.salary_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salary_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salary_btn.ForeColor = System.Drawing.Color.SkyBlue;
+            this.salary_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salary_btn.Location = new System.Drawing.Point(26, 142);
+            this.salary_btn.Name = "salary_btn";
+            this.salary_btn.Size = new System.Drawing.Size(75, 73);
+            this.salary_btn.TabIndex = 4;
+            this.salary_btn.UseVisualStyleBackColor = false;
+            this.salary_btn.Click += new System.EventHandler(this.salary_btn_Click_1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(46, 354);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 18);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "LogOut";
             // 
             // MainForm
             // 
@@ -247,6 +316,7 @@ namespace EmployeeManagementSystem.Ui
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -261,7 +331,6 @@ namespace EmployeeManagementSystem.Ui
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label greet_user;
         private System.Windows.Forms.Button salary_btn;
-        private System.Windows.Forms.Button addEmployee_btn;
         private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -270,5 +339,11 @@ namespace EmployeeManagementSystem.Ui
         private System.Windows.Forms.Button button1;
         private Components.Dashboard dashboard1;
         private Components.AddEmployee addEmployee1;
+        private Components.Salary salary1;
+        private System.Windows.Forms.Button addEmployee_btn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }

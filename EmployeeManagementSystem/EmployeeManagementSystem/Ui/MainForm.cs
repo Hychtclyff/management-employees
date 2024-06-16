@@ -42,11 +42,11 @@ namespace EmployeeManagementSystem.Ui
 
         private void salary_btn_Click_1(object sender, EventArgs e)
         {
-            //userControl11.Visible = false;
-            //  userControl21.Visible = true;
-            //  userControl31.Visible = false;
+            dashboard1.Visible = false;
+            addEmployee1.Visible = false;
+            salary1.Visible = true;
 
-            // UserControl2 addEmForm = userControl21 as UserControl2;
+            Salary salary = salary1 as Salary;
 
         }
 
@@ -54,7 +54,7 @@ namespace EmployeeManagementSystem.Ui
         {
              dashboard1.Visible = false;
              addEmployee1.Visible = true;
-             //salary.Visible = true;
+             salary1.Visible = false;
 
              AddEmployee employee = addEmployee1 as AddEmployee;
 
@@ -66,6 +66,23 @@ namespace EmployeeManagementSystem.Ui
             addEmployee1.Visible = false;
 
             Dashboard dashboard = dashboard1 as Dashboard;
+        }
+
+        private void addEmployee1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salary1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            dashboard1.Visible = true;
+            addEmployee1.Visible = false;
+            salary1.Visible = false;
         }
     }
 }

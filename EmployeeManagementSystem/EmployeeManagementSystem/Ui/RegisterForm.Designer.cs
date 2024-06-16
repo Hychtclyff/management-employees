@@ -56,8 +56,8 @@ namespace EmployeeManagementSystem.Ui
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Blue;
-
+            this.pictureBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.pictureBox1.Image = global::EmployeeManagementSystem.Properties.Resources.EMPLYE;
             this.pictureBox1.Location = new System.Drawing.Point(104, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
@@ -68,9 +68,9 @@ namespace EmployeeManagementSystem.Ui
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Blue;
+            this.label6.BackColor = System.Drawing.Color.SkyBlue;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(44, 136);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(229, 19);
@@ -98,9 +98,9 @@ namespace EmployeeManagementSystem.Ui
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Blue;
+            this.label5.BackColor = System.Drawing.Color.SkyBlue;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(101, 330);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 14);
@@ -154,7 +154,7 @@ namespace EmployeeManagementSystem.Ui
             // 
             // signup_btn
             // 
-            this.signup_btn.BackColor = System.Drawing.Color.White;
+            this.signup_btn.BackColor = System.Drawing.SystemColors.Control;
             this.signup_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signup_btn.FlatAppearance.BorderSize = 0;
             this.signup_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -174,7 +174,7 @@ namespace EmployeeManagementSystem.Ui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(314, 400);
             this.Controls.Add(this.signup_showPass);
             this.Controls.Add(this.signup_btn);
